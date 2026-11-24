@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | Wenjia</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+</head>
+<body>
+  <header class="hero">
+    <nav><span class="brand">WJ</span><a href="#about">About</a><a href="#interests">Interests</a><a href="#map">Map</a></nav>
+    <div class="hero-content">
+      <p class="eyebrow">HELLO, WORLD!</p>
+      <h1>Hi, I'm Wenjia.</h1>
+      <p class="subtitle">A student in Seattle, learning new things one step at a time.</p>
+      <a class="button" href="#about">Get to know me</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="section">
+      <p class="eyebrow">A LITTLE INTRODUCTION</p>
+      <h2>About Me</h2>
+      <p>I'm currently studying in Seattle. I enjoy exploring new ideas, learning practical skills, and meeting people with different perspectives. This page is a small project where I'm practicing HTML, CSS, and web publishing.</p>
+    </section>
+
+    <section id="interests" class="section">
+      <p class="eyebrow">WHAT I LIKE</p>
+      <h2>My Interests</h2>
+      <div class="cards">
+        <article class="card"><div class="emoji">🕵️</div><h3>Mystery Games</h3><p>I enjoy playing murder mystery games and solving clues with friends.</p></article>
+        <article class="card"><div class="emoji">📚</div><h3>Learning</h3><p>I'm curious about new topics and like turning unfamiliar things into useful skills.</p></article>
+        <article class="card"><div class="emoji">🌆</div><h3>Exploring Seattle</h3><p>I like discovering places around the city and enjoying new experiences.</p></article>
+      </div>
+    </section>
+
+    <section id="map" class="section">
+      <p class="eyebrow">A PLACE I'M CONNECTED TO</p>
+      <h2>Seattle, Washington</h2>
+      <p>This interactive map uses Leaflet and OpenStreetMap. You can zoom in and move around the map.</p>
+      <div id="mapid" role="application" aria-label="Map centered on Seattle"></div>
+      <p class="small">Map data © OpenStreetMap contributors</p>
+    </section>
+  </main>
+
+  <footer><p>Made with HTML, CSS, and a little curiosity.</p></footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    const map = L.map('mapid').setView([47.6062, -122.3321], 11);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    L.marker([47.6062, -122.3321]).addTo(map)
+      .bindPopup('Seattle, Washington')
+      .openPopup();
+  </script>
+</body>
+</html>

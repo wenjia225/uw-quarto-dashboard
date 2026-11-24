@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+:root { --ink: #202b3c; --muted: #64748b; --accent: #477b78; --paper: #f7f8f6; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--ink); background: var(--paper); font-family: 'DM Sans', sans-serif; line-height: 1.7; }
+.hero { min-height: 390px; color: white; background: linear-gradient(120deg, #253d4b, #477b78); padding: 24px max(7vw, 24px) 72px; }
+nav { display: flex; align-items: center; gap: 24px; max-width: 1050px; margin: auto; }
+nav a { color: white; text-decoration: none; font-size: .95rem; opacity: .9; }
+.brand { margin-right: auto; border: 1px solid #ffffff80; border-radius: 50%; width: 42px; height: 42px; display: grid; place-items: center; font-weight: 700; }
+.hero-content { max-width: 1050px; margin: 72px auto 0; }
+.eyebrow { color: #6b9994; font-size: .76rem; font-weight: 700; letter-spacing: .16em; }
+.hero .eyebrow { color: #c2dfd9; }
+h1, h2 { font-family: 'Playfair Display', Georgia, serif; line-height: 1.15; }
+h1 { font-size: clamp(2.7rem, 7vw, 4.8rem); margin: 8px 0 12px; }
+h2 { font-size: clamp(2rem, 4vw, 2.7rem); margin: 4px 0 18px; }
+.subtitle { color: #e3eeec; font-size: 1.1rem; }
+.button { display: inline-block; margin-top: 18px; padding: 10px 18px; border-radius: 24px; background: white; color: #294d4b; text-decoration: none; font-weight: 700; }
+.section { max-width: 1050px; margin: 0 auto; padding: 68px 24px; }
+.section > p:not(.eyebrow) { max-width: 760px; color: var(--muted); }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 28px; }
+.card { background: white; border: 1px solid #e8ece9; border-radius: 16px; padding: 24px; box-shadow: 0 8px 24px #243b4b0a; }
+.card h3 { margin-bottom: 6px; }
+.card p { color: var(--muted); margin-bottom: 0; }
+.emoji { font-size: 2rem; }
+#mapid { height: 350px; width: 100%; margin-top: 24px; border-radius: 16px; overflow: hidden; border: 1px solid #dce4e1; }
+.small { font-size: .8rem; }
+footer { text-align: center; padding: 26px; background: #eaf0ed; color: #5d6e6c; }
+@media (max-width: 700px) { .cards { grid-template-columns: 1fr; } nav { gap: 14px; } .hero-content { margin-top: 54px; } }
